@@ -20,7 +20,7 @@ public class main {
 
         
         UserAccounts.LoadAllUsers();
-        
+        System.out.println(UserAccounts.GetallUsers());
         
         
         Map<String,String> user = new HashMap<String, String>();
