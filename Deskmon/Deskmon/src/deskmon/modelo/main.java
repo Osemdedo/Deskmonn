@@ -8,27 +8,23 @@ package deskmon.modelo;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  *
- * @author matheus
+ * @authors arthur, lucas & matheus
  */
 public class main {
     
     
     public static void main(String[] args) {
 
-        
-        UserAccounts.LoadAllUsers();
-        System.out.println(UserAccounts.GetallUsers());
-        
-        
-        Map<String,String> user = new HashMap<String, String>();
-        user.put("nome", "iiih");
-        user.put("kkkkkkkkkkkk", "asdh");
-        user.put("a3a4h", "ghgghh");
-        user.put("6aa4h", "kjkjkjkh");
-        UserAccounts.ChangeArquivo(user);
+    	TelaPrincipal tela = new TelaPrincipal();
+    	tela.inicio();
+    	
+    	
+    	
+
     }
     
 }

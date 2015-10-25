@@ -1,0 +1,11 @@
+nome:Parana
+materia:Portugues
+numero:1
+monstro1:Caracas
+monstro2:Furia
+>>>
+nome:Minas Gerais
+materia:Matematica
+numero:1
+monstro1:Garras
+>>>

@@ -4,6 +4,11 @@ import java.util.List;
 
 public class MonstroJogador extends Monstro{
 
+	public MonstroJogador(int vida, int dano, int sprite, String nome) {
+		super(vida, dano, sprite, nome);
+		// TODO Auto-generated constructor stub
+	}
+
 	private int experiencia;
 	private int xpProximoNivel;
 	private int nivel;

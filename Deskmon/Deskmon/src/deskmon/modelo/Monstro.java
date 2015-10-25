@@ -7,6 +7,16 @@ public class Monstro {
 	private int sprite; //id da sprite a ser carregada
 	private String nome;
 
+	
+	
+	
+	public Monstro(int vida, int dano, int sprite, String nome) {
+		this.vida = vida;
+		this.dano = dano;
+		this.sprite = sprite;
+		this.nome = nome;
+	}
+
 	public int getVida() {
 		return vida;
 	}

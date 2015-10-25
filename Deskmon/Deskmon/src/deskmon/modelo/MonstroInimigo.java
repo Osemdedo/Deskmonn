@@ -1,18 +1,29 @@
 package deskmon.modelo;
 
+/**
+ * @author matheus
+ *
+ */
 public class MonstroInimigo extends Monstro {
 
 	private int experienciaRecebida;
 	private boolean chefe;
-	private Materia materia;
+	
+	
+	
+	
+	
+	
+	
 
-	public Materia getMateria() {
-		return materia;
+	public MonstroInimigo(int vida, int dano, int sprite, String nome, int experienciaRecebida, boolean chefe) {
+		super(vida, dano, sprite, nome);
+		this.experienciaRecebida = experienciaRecebida;
+		this.chefe = chefe;
+		
 	}
 
-	public void setMateria(Materia materia) {
-		this.materia = materia;
-	}
+
 
 	public boolean isChefe() {
 		return chefe;
@@ -29,5 +40,14 @@ public class MonstroInimigo extends Monstro {
 	public void setExperienciaRecebida(int experienciaRecebida) {
 		this.experienciaRecebida = experienciaRecebida;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "MonstroInimigo [experienciaRecebida=" + experienciaRecebida + ", chefe=" + chefe + "]";
+	}
+	
+	
 
 }
