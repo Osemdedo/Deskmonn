@@ -1,0 +1,11 @@
+nome:Matematica
+numero:3
+pergunta1:1+1;1;2;3;4;2;2
+pergunta2:3+2;2;3;4;5;1;4
+pergunta3:6/2;1;2;3;4;1;3
+>>>
+nome:Biologia
+numero:2
+pergunta1:blablablasim?;3;4;5;6;3;2
+pergunta2:huehuehueuhenao?;bla;blu;ble;tica;3;1
+>>>

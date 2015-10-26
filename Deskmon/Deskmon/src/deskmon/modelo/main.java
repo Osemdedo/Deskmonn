@@ -18,13 +18,11 @@ public class main {
     
     
     public static void main(String[] args) {
-
+    	BancodeQuestoes exemplo = new BancodeQuestoes();
     	TelaPrincipal tela = new TelaPrincipal();
     	tela.inicio();
     	
     	
-    	
-
     }
     
 }

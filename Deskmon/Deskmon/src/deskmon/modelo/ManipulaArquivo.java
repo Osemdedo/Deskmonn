@@ -34,15 +34,11 @@ a string ">>>" deve ser adicionada para a separacção dos elementos
 
 */
 
-
-
-
 public class ManipulaArquivo {
 	
 	
 	public static List<String> ReadFile(String fileName) {
 	      
- 
         String line = null;
         List<String> readLines = new ArrayList<String>();
 
@@ -57,12 +53,14 @@ public class ManipulaArquivo {
             
             return readLines;
         }
-           
+       
         catch(FileNotFoundException ex) {
+        	
             System.out.println("Unable to open file '" + fileName + "'"); 
             return null;
         }
         catch(IOException ex) {
+        	
             System.out.println("Error reading file '" + fileName + "'");  
             return null;
         }      
@@ -77,10 +75,10 @@ public class ManipulaArquivo {
         try{
             
         	File file = new File(newfile);
-
-            if(!file.exists()){
+        	
+            if(!file.exists())
                file.createNewFile();
-            }
+            
 
             //Here true is to append the content to file
             FileWriter fw = new FileWriter(file,true);
@@ -106,8 +104,6 @@ public class ManipulaArquivo {
     
     }
 	
-
-
 
 
 public static void EditContent(Map<String,String> userdata,String newfileName){
@@ -192,11 +188,11 @@ public static void EditContent(Map<String,String> userdata,String newfileName){
 	    	   
 	           splitedString = line.split(":");   
 	           user.put(splitedString[0],splitedString[1]);  
+	           
 	       }
-	   }
+	   }    
 	    
 	    return map;            
 	}
-	
-	
+
 }

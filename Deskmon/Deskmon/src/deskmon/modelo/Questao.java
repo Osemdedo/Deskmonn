@@ -8,14 +8,30 @@ public class Questao {
 	private String alternativa3;
 	private String alternativa4;
 	private int dificuldade;
-	private int porcentagemAcertos;
-	private Materia materia;
+	private int resposta;
+	//private int porcentagemAcertos;
+	private String materia;
 
-	public Materia getMateria() {
+	
+	
+	public Questao(String texto, String alternativa1, String alternativa2, String alternativa3, String alternativa4,
+			int dificuldade, int resposta, String materia) {
+		super();
+		this.texto = texto;
+		this.alternativa1 = alternativa1;
+		this.alternativa2 = alternativa2;
+		this.alternativa3 = alternativa3;
+		this.alternativa4 = alternativa4;
+		this.dificuldade = dificuldade;
+		this.resposta = resposta;
+		this.materia = materia;
+	}
+
+	public String getMateria() {
 		return materia;
 	}
 
-	public void setMateria(Materia materia) {
+	public void setMateria(String materia) {
 		this.materia = materia;
 	}
 
@@ -67,12 +83,12 @@ public class Questao {
 		this.dificuldade = dificuldade;
 	}
 
-	public int getPorcentagemAcertos() {
+	/*public int getPorcentagemAcertos() {
 		return porcentagemAcertos;
 	}
 
 	public void setPorcentagemAcertos(int porcentagemAcertos) {
 		this.porcentagemAcertos = porcentagemAcertos;
 	}
-
+	*/
 }
