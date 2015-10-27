@@ -9,6 +9,7 @@ public class Questao {
 	private String alternativa4;
 	private int dificuldade;
 	private int resposta;
+	private boolean respondida;
 	//private int porcentagemAcertos;
 	private String materia;
 
@@ -25,6 +26,7 @@ public class Questao {
 		this.dificuldade = dificuldade;
 		this.resposta = resposta;
 		this.materia = materia;
+		this.respondida = false;
 	}
 
 	public String getMateria() {
@@ -82,7 +84,52 @@ public class Questao {
 	public void setDificuldade(int dificuldade) {
 		this.dificuldade = dificuldade;
 	}
+	
+	
+	public int getResposta() {
+		return resposta;
+	}
 
+	public void setResposta(int resposta) {
+		this.resposta = resposta;
+	}
+
+	public boolean isRespondida() {
+		return respondida;
+	}
+
+	public void setRespondida(boolean respondida) {
+		this.respondida = respondida;
+	}
+
+	@Override
+	public String toString() {
+		return "Questao [texto=" + texto + ", alternativa1=" + alternativa1 + ", alternativa2=" + alternativa2
+				+ ", alternativa3=" + alternativa3 + ", alternativa4=" + alternativa4 + ", dificuldade=" + dificuldade
+				+ ", resposta=" + resposta + ", materia=" + materia + "]";
+	}
+
+	
+	public void ImprimeQuestao(){
+		System.out.println("");
+		System.out.println("Resolva:");
+		System.out.println(this.getTexto());
+		System.out.println("1) "+this.getAlternativa1());
+		System.out.println("2) "+this.getAlternativa2());
+		System.out.println("3) "+this.getAlternativa3());
+		System.out.println("4) "+this.getAlternativa4());
+		System.out.println("");
+	}
+	
+	public boolean ChecaResposta(int resposta){
+		if(resposta == this.getResposta()){
+			System.out.println("Resposta Correta");
+			return true;
+		}
+		System.out.println("Resposta Incorreta");
+		return false;
+	}
+	
 	/*public int getPorcentagemAcertos() {
 		return porcentagemAcertos;
 	}
@@ -91,4 +138,6 @@ public class Questao {
 		this.porcentagemAcertos = porcentagemAcertos;
 	}
 	*/
+	
+	
 }

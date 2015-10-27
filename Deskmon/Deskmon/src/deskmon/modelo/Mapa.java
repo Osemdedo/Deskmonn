@@ -76,6 +76,38 @@ public class Mapa {
 		}
 	}
 	
+
+	
+	public void ListaCidades(){	
+		for(Cidade cidade: listaCidade){		
+			System.out.println(cidade.getNome()+" - "+cidade.getMateria());		
+		}
+	}
+	
+	public void ListaTodosMonstros(){
+		for(Monstro monstro : listaMonstro){
+			System.out.println(monstro.toString());
+		}
+	}
+	
+	
+	
+	
+	
+	public Cidade GetCidade(String nomeCidade){
+		
+		for(Cidade cidade : listaCidade){
+			if(nomeCidade.equals(cidade.getNome())){
+				
+				return cidade;
+			}
+			
+		}
+		System.out.println("Cidade nao Exite");
+		return null;
+	}
+		
+		
 	
 	
 	public List<Cidade> getLista() {

@@ -33,6 +33,27 @@ public class Cidade {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public void ListaMonstro(String nomeCidade){
+		
+		if(nomeCidade.equals(this.getNome())){
+				
+				for(Monstro monstro: this.getLista()){
+				System.out.println( monstro.getNome());
+				}
+		}
+	
+	}
+	
+	public MonstroInimigo Get_monstro(String nomeMonstro){
+		
+		for(MonstroInimigo monstro : lista){
+			if(nomeMonstro.equals(monstro.getNome())){
+				return monstro;
+			}
+		}
+		return null;
+	}
 
 	/*public boolean isDesbloqueada() {
 		return desbloqueada;

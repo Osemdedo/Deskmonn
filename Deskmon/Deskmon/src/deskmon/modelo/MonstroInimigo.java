@@ -24,7 +24,9 @@ public class MonstroInimigo extends Monstro {
 	}
 
 
-
+	/*public String getNome(){
+		return this.getNome();
+	}*/
 	public boolean isChefe() {
 		return chefe;
 	}

@@ -132,7 +132,7 @@ public static void EditContent(Map<String,String> userdata,String newfileName){
             }
                 
             if(aux==1){  
-                System.out.println(line);
+                //System.out.println(line);
                 //System.out.println("line: "+line+ " nome"+userdata.get("nome"));
                 
                 if(line.contains(">>>")){
