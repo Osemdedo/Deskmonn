@@ -60,4 +60,11 @@ public class UserAccounts {
     public  static Map<String, Map<String,String> > GetallUsers(){
         return allUsers;
     }
+    
+    //public static Jogador GetJogador(){
+		//UserAccounts jogador = new UserAccounts();
+    	//return jogador;
+    	
+    //}
+    
 }

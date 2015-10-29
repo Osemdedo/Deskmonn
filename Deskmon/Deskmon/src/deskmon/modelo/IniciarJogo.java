@@ -4,51 +4,42 @@ import java.util.Scanner;
 
 public class IniciarJogo {
 
-	static private MonstroInimigo inimigo;
-	static private Materia materia;
-	static private Scanner scn = new Scanner(System.in);
-	static private String resposta;
+	private static Mapa meuMapa ;
+	private static MonstroInimigo monstroInimigo;
+	private static Cidade minhaCidade;
+	private static Combate meuCombate;
 	
-	static public void valida(String x){
-		
-		while(!x.equals("a") && !x.equals("b") && !x.equals("c") && !x.equals("d")){
-			
-			System.out.println("Resposta inválida. Entre com uma letra entre a e d");
-			x = scn.next();
-		}
-		
-		resposta = x;
-	}
 	
-	static public void monsterBuilder(){
-		
-		
-		inimigo = new MonstroInimigo(20,100,1,"Inimigo",1,true);
-		
-		
-	}
 	
 	static public void comecar(Jogador jogador){
-	
-		monsterBuilder();
 		
-		System.out.println("Você entrou em uma batalha contra o "+ inimigo.getNome() + " do clã de Matematica !!");
-		System.out.println("Para atacar, responda corretamente a seguinte pergunta:");
-		System.out.println("2+8*7/4");
-		System.out.println("a) 20");
-		System.out.println("b) 16");
-		System.out.println("c) 14");
-		System.out.println("d) 18");
+		meuMapa = new Mapa();
+		meuCombate = new Combate();
+		String cidade;
+		String monstro;
+		Scanner newScanner = new Scanner(System.in);
 		
-		resposta = scn.next();
-		valida(resposta);
+    	
+		do{
+    	System.out.println("Escolha uma Cidade\n");
+    	meuMapa.ListaCidades();
+    	cidade = newScanner.nextLine();
+		}while((minhaCidade = meuMapa.GetCidade(cidade))==null);
+    	
+    	do{
+    	System.out.println("\n\nEscolha um montro");
+    	minhaCidade.ListaMonstro(cidade);
+    	monstro = newScanner.nextLine();
+    	monstroInimigo = minhaCidade.Get_monstro(monstro);
+    	}while((monstroInimigo = minhaCidade.Get_monstro(monstro))==null);
+    	
+    	
+    	
+    	meuCombate.IniciaCombate(monstroInimigo, jogador, minhaCidade.getMateria());
 		
-		if (resposta.equals("b")){
-			System.out.println("ok");
-			inimigo.setVida(inimigo.getVida() - jogador.getMonstro().getDano());
-			System.out.println("O monstro inimigo perdeu "+ jogador.getMonstro().getDano()+" pontos de vida e desmaiou");
-			System.out.println("Você venceu, parabéns!");
-		}
+		
+		
+		
 		
 		
 		
