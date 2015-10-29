@@ -87,7 +87,7 @@ public class Combate {
 	    		
 	    		RespostaCorreta();
 	    		if(inimigo.getVida()<=0){
-		    		System.out.println("O monstro inimigo desmaiou");
+		    		System.out.println("\n\nO monstro inimigo desmaiou");
 		    		System.out.println("Você venceu, parabéns!");
 		    		finalBatalha = false;
 	    		}
@@ -97,7 +97,7 @@ public class Combate {
 	    		RespostaIncorreta();
 	    		System.out.println(inimigo.getVida());
 	    		if(jogador.getMonstro().getVida()<=0){	    		
-		    		System.out.println("Seu monstro zerou a vida e voce perdeu o jogo");
+		    		System.out.println("\n\nSeu monstro zerou a vida e voce perdeu o jogo");
 		    		System.out.println("Tente novamente");
 		    		finalBatalha = false;
 	    		}
@@ -119,7 +119,7 @@ public class Combate {
 		System.out.println("O seu dano no inimigo foi: "+jogador.getMonstro().getDano());
 		int novaVida = inimigo.getVida() - jogador.getMonstro().getDano();
 		inimigo.setVida(novaVida);
-		System.out.println("Sua vida final: "+jogador.getMonstro().getVida()+" Vida final do Inimigo"+inimigo.getVida());
+		System.out.println("Sua vida final: "+jogador.getMonstro().getVida()+" Vida final do Inimigo: "+inimigo.getVida());
 		
 	};
 	public void RespostaIncorreta(){
@@ -127,7 +127,7 @@ public class Combate {
 		System.out.println("O dano do inimigo foi: "+inimigo.getDano());
 		int novaVida = jogador.getMonstro().getVida() -  inimigo.getDano();
 		jogador.getMonstro().setVida(novaVida);
-		System.out.println("Sua vida final: "+jogador.getMonstro().getVida()+" Vida final do Inimigo"+inimigo.getVida());
+		System.out.println("Sua vida final: "+jogador.getMonstro().getVida()+" Vida final do Inimigo: "+inimigo.getVida());
 		
 	};
 	
