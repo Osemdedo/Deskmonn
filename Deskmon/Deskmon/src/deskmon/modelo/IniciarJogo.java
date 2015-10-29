@@ -19,24 +19,25 @@ public class IniciarJogo {
 		String monstro;
 		Scanner newScanner = new Scanner(System.in);
 		
-    	
-		do{
-    	System.out.println("Escolha uma Cidade\n");
-    	meuMapa.ListaCidades();
-    	cidade = newScanner.nextLine();
-		}while((minhaCidade = meuMapa.GetCidade(cidade))==null);
-    	
-    	do{
-    	System.out.println("\n\nEscolha um montro");
-    	minhaCidade.ListaMonstro(cidade);
-    	monstro = newScanner.nextLine();
-    	monstroInimigo = minhaCidade.Get_monstro(monstro);
-    	}while((monstroInimigo = minhaCidade.Get_monstro(monstro))==null);
-    	
-    	
-    	
-    	meuCombate.IniciaCombate(monstroInimigo, jogador, minhaCidade.getMateria());
-		
+    	while(true){
+    		
+			do{
+	    	System.out.println("Escolha uma Cidade\n");
+	    	meuMapa.ListaCidades();
+	    	cidade = newScanner.nextLine();
+	    	
+			}while((minhaCidade = meuMapa.GetCidade(cidade))==null);
+	    	
+	    	do{
+	    	System.out.println("\n\nEscolha um montro");
+	    	minhaCidade.ListaMonstro(cidade);
+	    	monstro = newScanner.nextLine();
+	    	monstroInimigo = minhaCidade.Get_monstro(monstro);
+	    	}while((monstroInimigo = minhaCidade.Get_monstro(monstro))==null);
+	    		
+	    	meuCombate.IniciaCombate(monstroInimigo, jogador, minhaCidade.getMateria());
+	    	
+    	}
 		
 		
 		

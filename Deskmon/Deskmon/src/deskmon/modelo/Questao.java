@@ -1,5 +1,7 @@
 package deskmon.modelo;
 
+import java.util.Scanner;
+
 public class Questao {
 
 	private String texto;
@@ -114,14 +116,51 @@ public class Questao {
 		System.out.println("");
 		System.out.println("Resolva:");
 		System.out.println(this.getTexto());
-		System.out.println("1) "+this.getAlternativa1());
-		System.out.println("2) "+this.getAlternativa2());
-		System.out.println("3) "+this.getAlternativa3());
-		System.out.println("4) "+this.getAlternativa4());
+		System.out.println("a) "+this.getAlternativa1());
+		System.out.println("b) "+this.getAlternativa2());
+		System.out.println("c) "+this.getAlternativa3());
+		System.out.println("d) "+this.getAlternativa4());
 		System.out.println("");
 	}
 	
-	public boolean ChecaResposta(int resposta){
+	
+	
+	
+
+	
+	static public String EscreveResposta(){
+		
+		Scanner scn = new Scanner(System.in);
+		String x = scn.nextLine();
+		while(!x.equals("a") && !x.equals("b") && !x.equals("c") && !x.equals("d")){
+			
+			System.out.println("Entre com uma letra entre a e d");
+			x = scn.next();
+		}
+		
+		return x;
+	}
+	public boolean ChecaResposta(String Stringresposta){
+		
+		int resposta =0;;
+		switch(Stringresposta){
+		case "a":
+			resposta = 1 ;
+			break;
+		case "b":
+			resposta = 2;
+			break;
+		case "c":
+			resposta = 3;
+			break;
+		case "d":
+			resposta = 4;
+			break;
+		default:
+			return false;
+		}
+		
+		
 		if(resposta == this.getResposta()){
 			System.out.println("Resposta Correta");
 			return true;

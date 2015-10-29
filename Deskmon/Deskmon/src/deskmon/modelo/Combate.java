@@ -77,7 +77,12 @@ public class Combate {
 		while(finalBatalha){
 			
 			GeraPergunta();
-	    	int resposta = newScanner.nextInt();
+			String resposta;
+
+	    	resposta = Questao.EscreveResposta();	
+
+	    	
+	    	
 	    	if(minhaQuestao.ChecaResposta(resposta)){
 	    		
 	    		RespostaCorreta();

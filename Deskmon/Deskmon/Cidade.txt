@@ -1,11 +1,11 @@
-nome:Parana
+nome:Stone
 materia:Biologia
 numero:3
 monstro1:Caracas
 monstro2:Furia
 monstro3:Tesoura
 >>>
-nome:Minas Gerais
+nome:Rocket
 materia:Matematica
 numero:3
 monstro1:Garras
