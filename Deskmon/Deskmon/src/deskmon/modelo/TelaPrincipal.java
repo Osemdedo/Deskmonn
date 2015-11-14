@@ -7,12 +7,17 @@ public class TelaPrincipal {
 	private Scanner scn = new Scanner(System.in);
 	private int opcao;
 	
-
-	public void inicio() {
+	public TelaPrincipal(){
+		
 		System.out.println("               DeskMon              \n\n\n");
 		System.out.println("1-Novo Jogo  2-Continuar  3-Rankings");
 		opcao = scn.nextInt();
 		menuPrincipal(opcao);
+		
+	}
+	
+	public void inicio() {
+		
 	}
 
 	public void menuPrincipal(int opcao) {

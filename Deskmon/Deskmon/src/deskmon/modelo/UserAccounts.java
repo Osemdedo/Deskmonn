@@ -58,6 +58,7 @@ public class UserAccounts {
       
     //Retorna o dicionario com todos os usuarios
     public  static Map<String, Map<String,String> > GetallUsers(){
+    	allUsers = ManipulaArquivo.LoadAllContent(NomedoArquivo);
         return allUsers;
     }
     

@@ -15,8 +15,12 @@ public class MonstroJogador extends Monstro{
 	
 	
 	
-	public MonstroJogador(int vida, int dano, int sprite, String nome) {
+	public MonstroJogador(int vida, int dano, int sprite, String nome,int tipo,int experiencia, int xpProximoNivel, int nivel) {
 		super(vida, dano, sprite, nome);
+		this.tipo = tipo;
+		this.experiencia = 0;
+		this.xpProximoNivel = 0;
+		this.nivel = 1;
 		// TODO Auto-generated constructor stub
 	}
 

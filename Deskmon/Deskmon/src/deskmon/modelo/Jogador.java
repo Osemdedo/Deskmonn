@@ -1,5 +1,6 @@
 package deskmon.modelo;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class Jogador {
@@ -23,7 +24,7 @@ public class Jogador {
 		this.personagem = personagem;
 	}
 	
-	public static Jogador CreateJogador(){
+	public static Jogador CreateNovoJogador(){
 		
 		Scanner scn = new Scanner(System.in);
 		
@@ -48,6 +49,29 @@ public class Jogador {
 		Jogador novoJogador = new Jogador(nome, idade, serie, monstroJogador, personagem);	
 
 		return novoJogador;
+	}
+	
+	public static Jogador CarregaJogador(Map<String,String> meuJogador){
+		
+		
+		String nome = meuJogador.get("nome");
+		String nomeMonstro = meuJogador.get("nomeMonstro");
+		int idade = Integer.parseInt(meuJogador.get("idade"));
+		int serie = Integer.parseInt(meuJogador.get("serie"));
+		int tipoJogador= Integer.parseInt(meuJogador.get("tipoJogador"));
+		int tipoMonstro = Integer.parseInt(meuJogador.get("tipoMonstro"));
+		int vida = Integer.parseInt(meuJogador.get("vidaMonstro"));
+		int experiencia = Integer.parseInt(meuJogador.get("experiencia"));
+		int xpProximoNivel = Integer.parseInt(meuJogador.get("expericenciaProximoNivel"));
+		int nivel = Integer.parseInt(meuJogador.get("nivel"));
+		int dano = Integer.parseInt(meuJogador.get("danoMonstro"));
+
+		
+		MonstroJogador monstroJogador = new MonstroJogador(vida,dano,tipoMonstro,nomeMonstro,tipoMonstro,experiencia,xpProximoNivel,nivel);
+		Jogador carregaJogador = new Jogador(nome, idade, serie, monstroJogador,tipoJogador);	
+		
+		return carregaJogador;
+
 	}
 
 

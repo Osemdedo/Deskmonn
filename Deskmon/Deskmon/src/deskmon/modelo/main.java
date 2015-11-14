@@ -21,7 +21,7 @@ public class main {
     	
     	
     	TelaPrincipal minhatela = new TelaPrincipal();
-    	minhatela.inicio();
+    	
     	
     	
     	

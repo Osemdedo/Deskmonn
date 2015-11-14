@@ -8,7 +8,7 @@ public class NovoJogo {
 	
 	static public void constroi() {
 
-		novoJogador = Jogador.CreateJogador();
+		novoJogador = Jogador.CreateNovoJogador();
 		IniciarJogo.comecar(novoJogador);
 	}
 		
