@@ -27,7 +27,7 @@ vidaMonstro:3000
 danoMonstro:100
 >>>
 nome:Pedro3
-idade:155
+idade:152
 cidade:Olaria11
 expericenciaProximoNivel:3001 
 experiencia:2001
